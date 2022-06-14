@@ -1,5 +1,164 @@
 <!-- header.html, { title: 'Home' } -->
+<style>
+    .lab-header-name{
+        display: inline-block;
+    }
+    .lab-header-name h4{
+        font-size: 16px;
+    }    
+    .lab-header-status{
+        float:right
+    }
+    .lab-header-status-text{
+        font-variant: small-caps;
+    }
+    .lab-expected-supplement-settings{
+        margin-bottom: 5px;
+        /* border-top: 1px solid #ddd; */
+        /* padding-top: 5px; */
+    }
+    .speech-bubble {
+        margin-left: 20px;
+        background: #f7fbff;
+        position: relative;
+        padding: 4px 8px;
+        margin: 4px 0px;
+        /* border-radius: 10px; */
+        color:#00518f;
+        display:inline-block;
+        border: 1px solid #f7fbff;
+    }
+    .speech-bubble:hover {
+        border: 1px solid #0077cc;
+    }
+    .speech-bubble.warning {
+        background: #fffbf2;
+        border: 1px solid #fffbf2;
+        color: #cc9600
+    }
+    .speech-bubble.inactive {
+        color: gray;
+    }    
+    .speech-bubble.left-arrow::after {
+        left: 0;
+	    top: 50%;
+        content: '';
+        position: absolute;
+        border: 6px solid transparent;
+        border-right-color: azure;
+        border-left: 0;
+        margin-top: -6px;
+        margin-left: -6px;
+    }    
+    .speech-bubble.right-arrow::after {
+        right: 0;
+	    top: 50%;
+        content: '';
+        position: absolute;
+        border: 6px solid transparent;
+        border-left-color: azure;
+        border-right: 0;
+        margin-top: -6px;
+        margin-right: -6px;
+    }
+    .lab-message-sender{
+        font-style: italic;
+        color:grey;
+    }
+    .lab-open{
+           
+    }
+    .lab-open-status{
+        font-variant: small-caps;
+        display: inline-block;
+        position: relative;
+    }
+    .lab-open-status-icon{
+        display: inline-block;
+        width: 22px;
+        position: absolute;
+        top: -1px;
+    }
+    .lab-open-status-text{
+        padding-left: 26px;
+    }
+    .lab-button{
+        margin: 4px 0;
+        display: inline-block;
+    }
+    .lab-button.hidden{
+        visibility: hidden;
+        display: none;
+    }    
+    .lab-button-text{
+        display: inline-block;
+    }
+    .lab-separator{
+        display: inline-block;
+        width: 1px;
+        height: 16px;
+        margin-bottom: -4px;
+        margin-right: 2px;
+        margin-left: 2px;
+        background-color: #fff;
+        border-radius: 1px;
+    }
+    .lab-arrow{
+        border: solid #FFF;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 4px;
+        margin-bottom: 2px;
+        border-radius: 1px;
+        transform: rotate(45deg) translateY(2px);
+        -webkit-transform: rotate(45deg);
+    }
+    .rolldown-button{
+        border-top: solid #FFF 1px;
+        padding-top: 4px;
+        margin-top: 6px;
+        display: none;
+    }
 
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 420px;
+    }
+
+    /* The Close Button */
+    .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+</style>
 <div class="root-container" id="root">
     <div class="view-root">
         <div class="section-content">
@@ -127,24 +286,21 @@
                                 <a href="#">
                                     + Lägg till handling
                                 </a>
-                            </div>  
-                            <div class="lab-conversation">                           
-                                <div class="lab-conversation-message">
-                                    <div class="lab-conversation-applicant">
-                                        Sökande
+                            </div>                             
+                            <div>
+                                <div class="speech-bubble">
+                                    <div>
+                                        Sökande vill komplettera <q>Jag kommer åka hem över midsommar och kan fixa det då.</q>
                                     </div>
-                                    <div class="speech-bubble left-arrow">
-                                        Vill komplettera <q>Jag kommer åka hem över midsommar och kan fixa det då.</q>
-                                    </div>
-                                    <div class="lab-button">
-                                        <a href="#" class="btn btn-link btn-default btn-small">
-                                            <div class="lab-button-text">
-                                                Bevilja eller avslå
-                                            </div>
-                                        </a>
-                                    </div>                                  
-                                </div>   
-                            </div>                                                                                
+                                </div>
+                                <div class="lab-button">
+                                    <a href="#" class="btn btn-link btn-default btn-small">
+                                        <div class="lab-button-text">
+                                            Bevilja eller avslå
+                                        </div>
+                                    </a>
+                                </div>                                  
+                            </div>                                                       
                         </div>
                         <div class="lab-expected-supplement-settings">
                             <div class="lab-open">
@@ -321,12 +477,9 @@
                                     Max antal filer har laddats upp
                                 </div>
                             </div>                           
-                            <div class="lab-conversation">                           
-                                <div class="lab-conversation-message">
-                                    <div class="lab-conversation-applicant">
-                                        Sökande
-                                    </div>
-                                    <div class="speech-bubble left-arrow">
+                            <div>
+                                <div class="speech-bubble">
+                                    <div>
                                         Sökande avser att komplettera <q>Annonsen om puder är inte så bra. Jag kommer göra en mycket bättre och laddar upp den när jag är ...</q>
                                     </div>
                                 </div>
@@ -508,13 +661,10 @@
                                     + Lägg till handling
                                 </a>
                             </div>
-                            <div class="lab-conversation">                           
-                                <div class="lab-conversation-message">
-                                    <div class="lab-conversation-applicant">
-                                        Sökande
-                                    </div>
-                                    <div class="speech-bubble left-arrow inactive">
-                                        Avsåg att komplettera (stängde 2022-05-10) <q>Annonsen om puder är inte så bra. Jag kommer göra en mycket bättre ...</q>
+                            <div>
+                                <div class="speech-bubble inactive">
+                                    <div>
+                                        Sökande avsåg att komplettera (stängde 2022-05-10) <q>Annonsen om puder är inte så bra. Jag kommer göra en mycket bättre ...</q>
                                     </div>
                                 </div>
                             </div>                             
@@ -597,23 +747,17 @@
                                     + Lägg till handling
                                 </a>
                             </div>
-                            <div class="lab-conversation">
-                                <div class="lab-conversation-message">
-                                    <div class="speech-bubble right-arrow inactive">
-                                        <div>
-                                            Begärde komplettering (stängde 2022-05-12) <q>Hej. Vi ser inte riktigt var du vill studera. var vänligt meddela oss innan ...</q>
-                                        </div>
-                                    </div>
-                                    <div class="lab-conversation-school">
-                                        Skolan        
+                            <div>
+                                <div class="speech-bubble inactive">
+                                    <div>
+                                        Skolan begärde komplettering (stängde 2022-05-12) <q>Hej. Vi ser inte riktigt var du vill studera. var vänligt meddela oss innan ...</q>
                                     </div>
                                 </div>
-                                <div class="lab-conversation-message">
-                                    <div class="lab-conversation-applicant">
-                                        Sökande
-                                    </div>
-                                    <div class="speech-bubble left-arrow">
-                                        Vill komplettera <q>Jag kommer åka hem över midsommar och kan fixa det då.</q>
+                            </div>                               
+                            <div>
+                                <div class="speech-bubble">
+                                    <div>
+                                        Sökande vill komplettera <q>Jag kommer åka hem över midsommar och kan fixa det då.</q>
                                     </div>
                                 </div>
                                 <div class="lab-button">
@@ -693,15 +837,12 @@
                                     + Lägg till handling
                                 </a>
                             </div>                             
-                            <div class="lab-conversation">
-                                <div class="lab-conversation-messasge">
-                                    <div class="lab-conversation-applicant">
-                                        Sökande
-                                    </div>
-                                    <div class="speech-bubble left-arrow">
+                            <div>
+                                <div class="speech-bubble">
+                                    <div>
                                         Sökande kommer inte skicka <q>Jag har inget övrigt.</q>
-                                    </div>            
-                                </div>                 
+                                    </div>
+                                </div>                             
                             </div>                                                       
                         </div>
                         <div class="lab-expected-supplement-settings">
@@ -835,19 +976,14 @@
                                 </a>
                             </div>                       
                         </div>
-                        <div class="lab-conversation">
-                            <div class="lab-conversation-message">
-                                <div class="speech-bubble right-arrow inactive">
+                            <div>
+                                <div class="speech-bubble">
                                     <div>
-                                        Har begärt komplettering <q>Hej! Annons 2 går inte att läsa. Ta bort den filen och ladda upp en ny.</q>
+                                        Skolan har begärt komplettering <q>Hej! Annons 2 går inte att läsa. Ta bort den filen och ladda upp en ny.</q>
                                     </div>
                                 </div>
-                                <div class="lab-conversation-school">
-                                    Skolan        
-                                </div>
                             </div>
-                        </div>
-                            <div class="lab-expected-supplement-settings">
+                        <div class="lab-expected-supplement-settings">
  
                             <div class="lab-open">
                                 <div class="lab-button">
