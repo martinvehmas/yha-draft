@@ -22,16 +22,16 @@
     display: flex;
 }
 .speech-bubble {
-    flex: 1 1 auto;
+    /* flex: 1 1 auto; */
     margin-left: 20px;
-    background: #f7fbff;
+    /* background: #ddd; */
     position: relative;
     padding: 4px 8px;
     margin: 4px 0px;
     border-radius: 10px;
     color:black;
     display:inline-block;
-    border: 1px solid #0077cc;
+    border: 1px solid #ddd;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -45,49 +45,47 @@
     color: #cc9600
 }
 .speech-bubble.inactive {
-    color: gray;
+    /* color: gray; */
 }    
-.speech-bubble.left-arrow::after {
-    left: 0;
-    top: 50%;
-    content: '';
-    position: absolute;
+.left-arrow{
     border: 6px solid transparent;
-    border-right-color: #0077cc;
+    border-right-color: #ddd;
     border-left: 0;
-    margin-top: -6px;
-    margin-left: -7px;
-}    
-.speech-bubble.right-arrow::after {
-    right: 0;
-    top: 50%;
-    content: '';
-    position: absolute;
+    height: 0px;
+    margin-top: 13px;
+}
+.right-arrow{
     border: 6px solid transparent;
-    border-left-color: #0077cc;
+    border-left-color: #ddd;
     border-right: 0;
-    margin-top: -6px;
-    margin-right: -7px;
+    height: 0px;
+    margin-top: 13px;
+}
+.lab-conversation-button{
+    margin-top:6px;
+    margin-left:6px;
 }
 .lab-conversation-applicant{
     display: inline-block;
-    border: 1px solid #9c7008;
+    /* background: lightcyan; */
+    border: 1px solid #ddd;
     padding: 4px 8px;
-    margin: 4px 0px;
+    margin: 4px 4px 4px 0;
     border-radius: 10px;
     font-style: italic;
-    font-weight: bold;
-    color:grey;
+    /* font-weight: bold; */
+    color:black;
 }
+
 .lab-conversation-school{
     display: inline-block;
-    border: 1px solid #9c7008;
+    /* background: lightcyan; */
+    border: 1px solid #ddd;
     padding: 4px 8px;
-    margin: 4px 0px;
+    margin: 4px 0px 4px 4px;
     border-radius: 10px;
     font-style: italic;
-    font-weight: bold;
-    color:grey;
+    color:black;
 }
 .lab-open{
        
