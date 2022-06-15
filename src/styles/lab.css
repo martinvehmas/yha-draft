@@ -5,9 +5,23 @@
 .lab-files-container{
     padding: 10px 10px 0;
 }
+.lab-no-files{
+    font-style:italic;
+    font-size:10px;
+    padding-bottom:6px
+}
 .lab-conversation-panel{
     background: #f4f4f4;
-    border-top: 1px solid #aaa;
+    /* border-top: 1px solid #aaa; */
+    border: none;
+    font-size: 10px;
+    max-width: 500px;
+    margin-bottom: 10px;
+}
+.lab-conversation-panel.middle{
+    border: none;
+    font-size: 10px;
+    max-width: 500px;
 }
 .lab-header-name{
     display: inline-block;
@@ -50,7 +64,7 @@
 .speech-bubble:hover {
     border: 1px solid #0077cc;
 }
-.speech-bubble.warning {
+.lab-warning {
     background: #fffbf2;
     border: 1px solid #fffbf2;
     color: #cc9600
