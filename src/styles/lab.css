@@ -14,14 +14,9 @@
     background: #f4f4f4;
     /* border-top: 1px solid #aaa; */
     border: none;
-    font-size: 10px;
-    max-width: 500px;
+    max-width: 490px;
+    padding: 5px;
     margin-bottom: 10px;
-}
-.lab-conversation-panel.middle{
-    border: none;
-    font-size: 10px;
-    max-width: 500px;
 }
 .lab-header-name{
     display: inline-block;
@@ -41,8 +36,7 @@
     /* padding-top: 5px; */
 }
 .lab-conversation{
-    max-width: 500px;
-    padding: 5px 10px 5px 10px
+    font-size: 10px;
 }
 .lab-conversation-message{
     display: flex;
