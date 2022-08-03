@@ -62,10 +62,23 @@
 .lab-open-status-text{
     padding-left: 26px;
 }
+.lab-info-from-user-list{
+    margin: 0;
+    padding-left: 0px;
+    list-style: none;
+    line-height: 16px;
+}
 .lab-info-from-user-inline-display{
-    border: none !important;
-    /* background-color: #fafafa !important; */
-    border-radius: 0px !important;
+    max-width: 500px;
+    display:flex; 
+    flex-direction:row; 
+    justify-content:space-between; 
+    line-height:16px;
+    margin:6px 0;
+}
+.lab-info-from-user-inline-display:hover{
+    background-color: aliceblue;
+    cursor: pointer;
 }
 .lab-info-from-user-text{
     margin-left: 5px;
