@@ -7,6 +7,9 @@
 }
 .lab-expected-application-supplement-header{
     display: flex;
+    background-color: #f5f5f5;
+    margin: 6px 0;
+    padding: 0 4px;
 }
 .lab-header-name{
     flex: 1 1 auto;
@@ -40,6 +43,7 @@
     display: inline-block;
     font-variant: normal;
     font-weight: normal;
+    float: right;
 }
 .lab-open-date.passed{
     color: #999
@@ -81,7 +85,7 @@
     border: none !important;
 }
 .lab-hourglass{
-    padding-top: 4px
+    display: inline-block;
 }
 .lab-extended-reply-button{
     margin:4px
@@ -217,16 +221,16 @@ cursor: pointer;
     display:flex; 
     flex-direction:row; 
     justify-content:space-between; 
-    /* border: 1px solid #ddd; 
-    border-radius: 4px; */
-    border-bottom: 1px dashed silver;
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+    /* border-bottom: 1px dashed silver; */
     line-height:16px;
 }
  .lab-files-container .document-list .document-item .document-item-inline-display .document-item-icon {flex: 0 0 auto;width:18px;}
  .lab-files-container .document-list .document-item .document-item-inline-display .document-item-name {flex: 1 1 auto;margin-left: 5px;padding:2px 5px 2px 0;}
  .lab-files-container .document-list .document-item .document-item-inline-display .document-item-menu {
     flex: 0 0 auto;
-    /* border-left:1px solid #ddd; */
+    border-left:1px solid #ddd;
     width:18px;
     text-align:center;
     background-image:url(../Images/Icons/more-options.black.png);

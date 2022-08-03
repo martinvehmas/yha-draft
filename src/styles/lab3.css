@@ -29,6 +29,8 @@
 }
 .lab-total-status-text{
     font-weight: bold;
+}
+.lab-total-status-text.red{
     color: red;
 }
 .lab-open{
@@ -63,7 +65,7 @@
 }
 .lab-info-from-user-text{
     margin-left: 5px;
-    padding:4px 5px 2px 0;
+    padding: 2px 4px 2px 0;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -78,7 +80,9 @@
 .lab-info-from-user-menu{
     border: none !important;
 }
-
+.lab-hourglass{
+    padding-top: 4px
+}
 .lab-extended-reply-button{
     margin:4px
 }
