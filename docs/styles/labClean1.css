@@ -1,0 +1,185 @@
+.lab-expected-application-supplement-container{
+    margin-bottom: 20px;
+    border: 1px solid #aaa;
+}
+.lab-expected-application-supplement-list{
+    margin-bottom: 20px;
+}
+.lab-expected-application-supplement{
+    padding: 10px 10px 0;
+    max-width: 500px;
+}
+.lab-expected-application-supplement-header{
+    background-color: #f5f5f5;
+    margin: 6px 0;
+}
+.lab-expected-application-supplement-header-name{
+    display: inline-block;
+    border-radius: 6px;   
+    padding: 4px; 
+    margin: 2px;
+}
+.lab-expected-application-supplement-header-name:hover{
+    background-color: aliceblue;
+    cursor: pointer;    
+}
+.lab-application-supplements-list{
+    margin: 0;
+    padding-left: 0px;
+    line-height: 16px;
+}
+.lab-application-supplement{
+    border-radius: 6px;
+    padding: 4px;
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+}
+.lab-application-supplement:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.lab-application-supplement:last-of-type{
+    margin-bottom: 5px;
+}
+.lab-document-item-icon{
+    margin-right: 6px;
+}
+.lab-application-supplement-name{
+    display: inline-block;
+    color: #0077cc
+}
+.lab-info-from-user{
+    border-radius: 6px;   
+    padding: 4px;
+    margin: 2px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+.lab-info-from-user.passed{
+    color: #999;
+}
+.lab-info-from-user:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.lab-total-status{
+    padding: 5px 0;
+}
+.lab-total-status-text{
+    font-weight: bold;
+}
+.lab-total-status-text.red{
+    color: red;
+}
+.lab-open-date{
+    font-variant: normal;
+    font-weight: normal;
+    padding: 4px; 
+    margin: 2px;
+    float: right;
+    border-radius: 6px;
+}
+.lab-open-date.passed{
+    color: #999
+}
+.lab-open-date:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.lab-info-from-user-list{
+    margin: 0;
+    padding-left: 0px;
+    list-style: none;
+    line-height: 16px;
+}
+.lab-info-from-user-sender{
+    display: inline-block;
+    font-variant: small-caps;
+}
+.lab-hourglass{
+    display: inline-block;
+}
+.lab-extended-reply-button{
+    margin:6px 4px
+}
+.lab-tools{
+    margin: 10px;
+}
+.lab-button{
+    /* margin: 10px; */
+    display: inline-block;
+}
+.lab-button.hidden{
+    visibility: hidden;
+    display: none;
+}    
+.lab-button-text{
+    display: inline-block;
+}
+.lab-separator{
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    margin-bottom: -4px;
+    margin-right: 2px;
+    margin-left: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+}
+.lab-arrow{
+    border: solid #FFF;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 4px;
+    margin-bottom: 2px;
+    border-radius: 1px;
+    transform: rotate(45deg) translateY(2px);
+    -webkit-transform: rotate(45deg);
+}
+.rolldown-button{
+    border-top: solid #FFF 1px;
+    padding-top: 4px;
+    margin-top: 6px;
+    display: none;
+}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 420px;
+}
+
+/* The Close Button */
+.close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
